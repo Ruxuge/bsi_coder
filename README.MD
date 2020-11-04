@@ -1,1 +1,1 @@
-algorytmyvim .gitignore !
+algorytmy!!!
