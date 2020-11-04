@@ -16,13 +16,21 @@ Operating time = Total time – Downtime = 150,000 – 2,000 = 148,000
 Therefore: FR(N) = 6/148,000 = 0.0000405 failures/hour
 MTBF = 1/FR(N) = 24,691 hours
 */
+
 class Main {
 
-    double FR;
-    double FRN;
+    double frPerTest;
+    double frPerTime;
+
+    double totalTime;
+    double downTime;
+    double operatingTime;
+    double MTBF;
 
 
     public static void main(String[] args) {
+
+
         System.out.println("hello");
     }
 }
