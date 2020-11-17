@@ -19,20 +19,37 @@ MTBF = 1/FR(N) = 24,691 hours
 
 public class Main {
 
-    double frPerTest;
-    double frPerTime;
-
-    double totalTime;
-    double downTime;
-    double operatingTime;
-    double MTBF;
-
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double a = scanner.nextDouble();
         double b = scanner.nextDouble();
 
-        System.out.println(a+" "+b);
+        double frPerTest;
+        double frPerTime;
+
+        double totalTime;
+        double downTime;
+        double operatingTime;
+        double MTBF;
+
+        int failures = 6;
+        int nTests = 300;
+
+        totalTime = 300*500;
+
+        downTime = (2*450)+(2*400)+200+100;
+
+        operatingTime = totalTime - downTime;
+
+        //System.out.println(a+" "+b);
+
+        frPerTest = failures/nTests;
+
+        frPerTime = failures/operatingTime;
+
+        MTBF = 1/frPerTime;
+
+        System.out.println(frPerTest+" "+frPerTime);
     }
 }
