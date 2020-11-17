@@ -21,15 +21,15 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        double a = scanner.nextDouble();
-        double b = scanner.nextDouble();
+        //Scanner scanner = new Scanner(System.in);
+        //double a = scanner.nextDouble();
+        //double b = scanner.nextDouble();
 
         double frPerTest;
         double frPerTime;
 
-        double totalTime;
-        double downTime;
+        int totalTime;
+        int downTime;
         double operatingTime;
         double MTBF;
 
@@ -42,14 +42,19 @@ public class Main {
 
         operatingTime = totalTime - downTime;
 
-        //System.out.println(a+" "+b);
-
-        frPerTest = failures/nTests;
+        frPerTest = (failures*100)/nTests;
 
         frPerTime = failures/operatingTime;
 
         MTBF = 1/frPerTime;
 
-        System.out.println(frPerTest+" "+frPerTime);
+        String fr = String.format("%.7f", frPerTime);
+
+        System.out.println("FR(N) = "+fr);
+        System.out.println("FR(%) = "+frPerTest);
+        System.out.println("Total Time = "+totalTime);
+        System.out.println("Down Time = "+downTime);
+        System.out.println("Operating Time = "+operatingTime);
+        System.out.println("MTBF = "+MTBF);
     }
 }
