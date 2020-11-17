@@ -1,5 +1,5 @@
 package pl.pjatk.bsi_algorytmy.alg1;
-
+import java.util.Scanner;
 
 /*
 California Instruments, Inc., produces 3,000 computer chips per day. Three hundred are tested for a period of 500 operating hours each.
@@ -17,7 +17,7 @@ Therefore: FR(N) = 6/148,000 = 0.0000405 failures/hour
 MTBF = 1/FR(N) = 24,691 hours
 */
 
-class Main {
+public class Main {
 
     double frPerTest;
     double frPerTime;
@@ -29,8 +29,10 @@ class Main {
 
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double a = scanner.nextDouble();
+        double b = scanner.nextDouble();
 
-
-        System.out.println("hello");
+        System.out.println(a+" "+b);
     }
 }
