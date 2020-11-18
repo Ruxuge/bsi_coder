@@ -1,6 +1,7 @@
 package pl.pjatk.bsi_algorytmy;
 
 import pl.pjatk.bsi_algorytmy.expectedBreakdownCost.BreakdownCostCalculator;
+import pl.pjatk.bsi_algorytmy.highestFailureRate.HighestFailureRateCalculator;
 
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -28,7 +29,8 @@ public class App {
 
                     break;
                 case 3:
-
+                    caster.setAlgorithm(new HighestFailureRateCalculator());
+                    caster.cast();
                     break;
                 case 4:
 
@@ -49,6 +51,7 @@ public class App {
     }
 
     private int getMenuOption() {
+        printer.println("\nEnter your option:");
         return Integer.parseInt(scanner.nextLine());
     }
 
@@ -56,9 +59,9 @@ public class App {
         printer.println("Select option: " +
                 "\n\t 1 - alg1" +
                 "\n\t 2 - alg2" +
-                "\n\t 3 - alg3" +
+                "\n\t 3 - Highest failure rate " +
                 "\n\t 4 - alg4" +
-                "\n\t 5 - BreakdownCostCalculator");
+                "\n\t 5 - Breakdown cost calculator");
     }
 
     public static void main(String[] args) {
