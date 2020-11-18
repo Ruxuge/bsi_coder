@@ -3,6 +3,8 @@ package pl.pjatk.bsi_algorytmy.alg5;
 import java.util.*;
 
 /**
+ * Given the probabilities below, calculate the expected breakdown cost.
+ *
  * @author Aleksander Konieczny
  */
 class Main {
