@@ -16,23 +16,8 @@ public class Row {
         return numberOfBreakdowns;
     }
 
-    public void setNumberOfBreakdowns(double numberOfBreakdowns) {
-        this.numberOfBreakdowns = numberOfBreakdowns;
-    }
-
-    public double getDailyFrequency() {
-        return dailyFrequency;
-    }
-
-    public void setDailyFrequency(double dailyFrequency) {
-        this.dailyFrequency = dailyFrequency;
-    }
-
     public double getProbability() {
         return probability;
     }
 
-    public void setProbability(double probability) {
-        this.probability = probability;
-    }
 }
