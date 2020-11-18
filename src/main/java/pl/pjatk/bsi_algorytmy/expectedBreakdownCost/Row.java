@@ -1,4 +1,4 @@
-package pl.pjatk.bsi_algorytmy.alg5;
+package pl.pjatk.bsi_algorytmy.expectedBreakdownCost;
 
 public class Row {
 

@@ -1,9 +1,18 @@
 package pl.pjatk.bsi_algorytmy;
 
+import pl.pjatk.bsi_algorytmy.expectedBreakdownCost.BreakdownCostCalculator;
+
 public class App {
 
-    //TODO main menu
+    private final AlgorithmCaster caster = new AlgorithmCaster();
+
+    private void run() {
+
+        caster.setAlgorithm(new BreakdownCostCalculator());
+        caster.cast();
+    }
+
     public static void main(String[] args) {
-        System.out.println("!app");
+        new App().run();
     }
 }
