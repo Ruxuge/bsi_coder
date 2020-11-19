@@ -8,8 +8,9 @@ import java.util.*;
  * Find the reliability and the failure rate at 0, 100, 200, etc hours. (You may find it helpful to set this up on a spreadsheet.)
  * Draw a graph to show the change in the failure rate as the transistors get older.
  * Do you think this component shows the bath tub pattern of failure? Draw a graph to show how the reliability changes over time.
+ *
+ * @author Aleksander Konieczny
  */
-
 class Main {
 
     public static int initTransistors = 1000;
