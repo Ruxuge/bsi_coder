@@ -1,13 +1,15 @@
-package pl.pjatk.bsi_algorytmy.alg1;
+package pl.pjatk.bsi_algorytmy.chipset;
+import pl.pjatk.bsi_algorytmy.chipset.client.Client;
+
 import java.util.Scanner;
 
-/*
+/**
 California Instruments, Inc., produces 3,000 computer chips per day. Three hundred are tested for a period of 500 operating hours each.
 During the test, six failed: two after 50 hours, two at 100 hours, one at 300 hours, and one at 400 hours.
 Find FR(%) and FR(N).
  */
 
-/*
+/**
 FR(%) = failures per number tested = 6/300 = 0.02 = 2%
 FR(N) = failures per operating time:
 Total time = 300 * 500 = 150,000 hours
@@ -19,35 +21,26 @@ MTBF = 1/FR(N) = 24,691 hours
 
 public class Main {
 
-
     public static void main(String[] args) {
-        //Scanner scanner = new Scanner(System.in);
-        //double a = scanner.nextDouble();
-        //double b = scanner.nextDouble();
 
-        double frPerTest;
-        double frPerTime;
+        Client client = new Client();
+        client.statisticView();
 
-        int totalTime;
-        int downTime;
-        double operatingTime;
-        double MTBF;
 
-        int failures = 6;
-        int nTests = 300;
+    }
 
-        totalTime = 300*500;
 
-        downTime = (2*450)+(2*400)+200+100;
 
-        operatingTime = totalTime - downTime;
+   /* public taker(){
+        //takeing variables
+        Scanner scanner = new Scanner(System.in);
+        int failures = scanner.nextInt();
+        int nTests = scanner.nextInt();
+    }
 
-        frPerTest = (failures*100)/nTests;
+    void out(){
 
-        frPerTime = failures/operatingTime;
-
-        MTBF = 1/frPerTime;
-
+        //text formating
         String fr = String.format("%.7f", frPerTime);
 
         System.out.println("FR(N) = "+fr);
@@ -56,5 +49,5 @@ public class Main {
         System.out.println("Down Time = "+downTime);
         System.out.println("Operating Time = "+operatingTime);
         System.out.println("MTBF = "+MTBF);
-    }
+    }*/
 }
