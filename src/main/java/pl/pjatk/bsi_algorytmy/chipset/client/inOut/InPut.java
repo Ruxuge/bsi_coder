@@ -63,9 +63,30 @@ public class InPut {
                 i = z - number;
             }*/
 
+            int downtime = 0;
+
+            System.out.println("Num of all fails: ");
+            int allFails = scanner.nextInt();
+
+            while (allFails > 0) {
+
+                System.out.println("Time of fail: ");
+                int timeOfFail = scanner.nextInt();
+
+                System.out.println("Num of failed Chips: ");
+                int numOfChips = scanner.nextInt();
+
+                int testPattern = numOfChips * (500 - timeOfFail);
+
+                downtime += testPattern;
+                allFails -= numOfChips;
+            }
+
+            System.out.println("Downtime: " + downtime);
+        }
 
 
-        System.out.println(testingStatistic.getFailures());
+        //System.out.println(testingStatistic.getFailures());
     }
 
 
