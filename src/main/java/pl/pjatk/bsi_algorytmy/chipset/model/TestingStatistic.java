@@ -9,9 +9,19 @@ public class TestingStatistic {
     private double operatingTime;
     private double MTBF;
     private double failures;
-    private double nTests;
+    private double testsNumber;
 
-    public double getFrPerTest(int i) {
+    public double getTestTime() {
+        return testTime;
+    }
+
+    public void setTestTime(double testTime) {
+        this.testTime = testTime;
+    }
+
+    private double testTime;
+
+    public double getFrPerTest() {
         return frPerTest;
     }
 
@@ -19,7 +29,7 @@ public class TestingStatistic {
         this.frPerTest = frPerTest;
     }
 
-    public double getFrPerTime(int i) {
+    public double getFrPerTime() {
         return frPerTime;
     }
 
@@ -67,11 +77,12 @@ public class TestingStatistic {
         this.failures = failures;
     }
 
-    public double getnTests() {
-        return nTests;
+    public double getTestsNumber() {
+        return testsNumber;
     }
 
-    public void setnTests(double nTests) {
-        this.nTests = nTests;
+    public void setTestsNumber(double testsNumber) {
+        this.testsNumber = testsNumber;
     }
+
 }

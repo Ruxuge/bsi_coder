@@ -13,11 +13,10 @@ import pl.pjatk.bsi_algorytmy.chipset.model.TestingStatistic;
  */
 
 public class Calculator {
-    //public void calculate(
-     //       double frPerTest, double frPerTime, double totalTime, double downTime, double operatingTime, double MTBF, double failures, double nTests) {
+
         public void calculate(TestingStatistic testingStatistic) {
 
-            testingStatistic.setTotalTime(300*500);
+            /*testingStatistic.setTotalTime(300*500);
 
             testingStatistic.setDownTime((2 * 450) + (2 * 400) + 200 + 100);
 
@@ -25,21 +24,14 @@ public class Calculator {
 
             testingStatistic.setFailures(6);
 
-            testingStatistic.setnTests(300);
+            testingStatistic.setTestsNumber(300);
 
-            testingStatistic.getFrPerTest((6 * 100) / 300);
+            testingStatistic.setFrPerTest(6.0/300);
 
-            testingStatistic.getFrPerTime(6 / 148000);
+            testingStatistic.setFrPerTime(6.0/148000);
 
-            testingStatistic.setMTBF(1/ 0.0000405);
-            /*
+            testingStatistic.setMTBF(1/ 0.0000405);*/
 
-            operatingTime = totalTime - downTime;
-
-            frPerTest = (failures * 100) / nTests;
-
-            frPerTime = failures / operatingTime;
-
-            MTBF = 1 / frPerTime;*/
+            testingStatistic.setTotalTime(testingStatistic.getTestsNumber() * testingStatistic.getTestTime());
     }
 }
