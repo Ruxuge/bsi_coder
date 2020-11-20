@@ -11,7 +11,7 @@ public class TestingStatistic {
     private double failures;
     private double nTests;
 
-    public double getFrPerTest() {
+    public double getFrPerTest(int i) {
         return frPerTest;
     }
 
@@ -19,7 +19,7 @@ public class TestingStatistic {
         this.frPerTest = frPerTest;
     }
 
-    public double getFrPerTime() {
+    public double getFrPerTime(int i) {
         return frPerTime;
     }
 
