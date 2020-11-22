@@ -33,14 +33,14 @@ public class OutPut {
 
         //text formating
         String frPerTime = String.format("%.2f", testingStatistic.getFrPerTime());
-        String MTBF = String.format("%.2f", testingStatistic.getMTBF());
+        String MTBFinDays = String.format("%.2f", testingStatistic.getMTBFinDays());
         String numberOfChips = String.format("%.0f", testingStatistic.getNumberOfChips());
         String failuresPerMonth = String.format("%.2f", testingStatistic.getFailuresPerMonth());
 
-        System.out.println("Total time: " + frPerTime);
-        System.out.println("MTBF: " + MTBF);
+        System.out.println("FR(N): " + frPerTime );
+        System.out.println("MTBF in days: " + MTBFinDays+" days");
         System.out.println("Number of tested chips : " + numberOfChips);
-        System.out.println("Failures per month: " + failuresPerMonth);
+        System.out.println("Failures per month: " + failuresPerMonth+" per Months");
     }
 
 }

@@ -10,8 +10,15 @@ public class InPut {
     public void taker(TestingStatistic testingStatistic){
         //taking variables
 
-        System.out.printf("Give number of tested Chips");
+        System.out.printf("Give number of tested Chips: ");
         testingStatistic.setNumberOfChips(scanner.nextDouble());
+
+        System.out.println("Dou you want enter all variables manually? (1 = yes/2 = no)");
+        Boolean check = scanner.nextBoolean();
+
+        if (check == true){
+            //Setter();
+        }
 
     }
 
