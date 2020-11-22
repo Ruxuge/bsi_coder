@@ -1,4 +1,4 @@
-package pl.pjatk.bsi_algorytmy.alg2;
+package pl.pjatk.bsi_algorytmy.failuresPerMonth;
 
 /*
 If 300 of these chips are used in building a mainframe computer, how many failures of the computer can be expected per month?
@@ -19,8 +19,15 @@ Calculation for MTBF assumes that failure of any one chip brings down entire sys
 
 */
 
+import pl.pjatk.bsi_algorytmy.failuresPerMonth.client.OutPut;
+
 class Main {
+
     public static void main(String[] args) {
-        System.out.println("hello");
+
+        OutPut outPut = new OutPut();
+        outPut.statisticView();
+
     }
+
 }

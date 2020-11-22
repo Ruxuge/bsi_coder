@@ -16,21 +16,6 @@ public class Calculator {
 
         public void calculate(TestingStatistic testingStatistic) {
 
-            /*testingStatistic.setTotalTime(300*500);
-
-            testingStatistic.setDownTime((2 * 450) + (2 * 400) + 200 + 100);
-
-            testingStatistic.setOperatingTime(150000 - 2000);
-
-            testingStatistic.setFailures(6);
-
-            testingStatistic.setTestsNumber(300);
-
-            testingStatistic.setFrPerTest(6.0/300);
-
-            testingStatistic.setFrPerTime(6.0/148000);
-
-            testingStatistic.setMTBF(1/ 0.0000405);*/
 
             testingStatistic.setTotalTime(testingStatistic.getTestsNumber() * testingStatistic.getTestTime());
 
@@ -41,5 +26,11 @@ public class Calculator {
             testingStatistic.setFrPerTime(testingStatistic.getFailures() / testingStatistic.getOperatingTime());
 
             testingStatistic.setMTBF( 1 / testingStatistic.getFrPerTime());
+
+
+            //failuresPerMonth
+            testingStatistic.setFailuresPerMonth(testingStatistic.getFrPerTest() * (24 * 30));
+
+            testingStatistic.setMTBFinDays(testingStatistic.getMTBF() / 30);
     }
 }

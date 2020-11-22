@@ -11,6 +11,36 @@ public class TestingStatistic {
     private double failures;
     private double testsNumber;
 
+    //failuresPerMonth Start
+    private double failuresPerMonth;
+    private double numberOfChips;
+    private double MTBFinDays;
+
+    public double getNumberOfChips() {
+        return numberOfChips;
+    }
+
+    public void setNumberOfChips(double numberOfChips) {
+        this.numberOfChips = numberOfChips;
+    }
+
+    public double getFailuresPerMonth() {
+        return failuresPerMonth;
+    }
+
+    public void setFailuresPerMonth(double failuresPerMonth) {
+        this.failuresPerMonth = failuresPerMonth;
+    }
+
+    public double getMTBFinDays() {
+        return MTBFinDays;
+    }
+
+    public void setMTBFinDays(double MTBFinDays) {
+        this.MTBFinDays = MTBFinDays;
+    }
+    //failuresPerMonth End
+
     public double getTestTime() {
         return testTime;
     }
