@@ -1,5 +1,5 @@
 package pl.pjatk.bsi_algorytmy.chipset;
-import pl.pjatk.bsi_algorytmy.chipset.client.Client;
+import pl.pjatk.bsi_algorytmy.chipset.client.OutPut;
 
 /**
 *California Instruments, Inc., produces 3,000 computer chips per day. Three hundred are tested for a period of 500 operating hours each.
@@ -21,8 +21,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Client client = new Client();
-        client.statisticView();
+        OutPut outPut = new OutPut();
+        outPut.statisticView();
 
     }
 

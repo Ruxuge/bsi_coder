@@ -1,11 +1,9 @@
 package pl.pjatk.bsi_algorytmy.chipset.client;
 
 import pl.pjatk.bsi_algorytmy.chipset.calculator.Calculator;
-import pl.pjatk.bsi_algorytmy.chipset.client.inOut.InPut;
 import pl.pjatk.bsi_algorytmy.chipset.model.TestingStatistic;
 
-
-public class Client {
+public class OutPut {
     public void statisticView(){
         Calculator calculator = new Calculator();
         TestingStatistic testingStatistic = new TestingStatistic();

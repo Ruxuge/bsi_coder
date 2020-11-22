@@ -33,5 +33,13 @@ public class Calculator {
             testingStatistic.setMTBF(1/ 0.0000405);*/
 
             testingStatistic.setTotalTime(testingStatistic.getTestsNumber() * testingStatistic.getTestTime());
+
+            testingStatistic.setOperatingTime(testingStatistic.getTotalTime() - testingStatistic.getDownTime());
+
+            testingStatistic.setFrPerTest(testingStatistic.getFailures() / testingStatistic.getTestsNumber());
+
+            testingStatistic.setFrPerTime(testingStatistic.getFailures() / testingStatistic.getOperatingTime());
+
+            testingStatistic.setMTBF( 1 / testingStatistic.getFrPerTime());
     }
 }
