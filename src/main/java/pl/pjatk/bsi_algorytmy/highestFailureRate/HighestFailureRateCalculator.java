@@ -23,10 +23,15 @@ public class HighestFailureRateCalculator implements Algorithm {
 
     @Override
     public void use() {
-        int hours = getHours();
-        double percentage = getReliability();
-        double result = calculateResult(hours, percentage);
-        printer.format("Highest failure rate is %.8f\n", result);
+        try {
+            int hours = getHours();
+            double percentage = getReliability();
+            double result = calculateResult(hours, percentage);
+            printer.format("Highest failure rate is %.8f\n", result);
+        } catch (NumberFormatException e) {
+            printer.println("Bad input value!");
+        }
+
     }
 
     private double calculateResult(int hours, double percentage) {

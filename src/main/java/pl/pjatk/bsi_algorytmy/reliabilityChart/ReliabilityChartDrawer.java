@@ -31,13 +31,17 @@ public class ReliabilityChartDrawer implements Algorithm {
 
     @Override
     public void use() {
-        int initTransistorValue = getInitialTransistorsValue();
-        TestUnit.initTransistorsValue = initTransistorValue;
-        int numberOfRows = getNumberOfRows();
-        List<TestUnit> units = getTestValues(numberOfRows, initTransistorValue);
-        chartDrawer = new ChartDrawer(units, scanner, printer);
-        chartDrawer.drawFailureRateChart(units);
-        chartDrawer.drawReliabilityChart(units);
+        try {
+            int initTransistorValue = getInitialTransistorsValue();
+            TestUnit.initTransistorsValue = initTransistorValue;
+            int numberOfRows = getNumberOfRows();
+            List<TestUnit> units = getTestValues(numberOfRows, initTransistorValue);
+            chartDrawer = new ChartDrawer(units, scanner, printer);
+            chartDrawer.drawFailureRateChart(units);
+            chartDrawer.drawReliabilityChart(units);
+        } catch (NumberFormatException e) {
+            printer.println("Bad input value!");
+        }
     }
 
     private int getInitialTransistorsValue() {

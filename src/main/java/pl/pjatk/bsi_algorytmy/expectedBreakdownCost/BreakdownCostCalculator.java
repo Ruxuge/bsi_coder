@@ -25,10 +25,14 @@ public class BreakdownCostCalculator implements Algorithm {
 
     @Override
     public void use() {
-        double breakdownCost = getBreakdownCost();
-        List<Row> rows = getRows(getNumberOfRows());
-        double result = calculateResult(rows, breakdownCost);
-        printer.println("Result is: $" + result);
+        try {
+            double breakdownCost = getBreakdownCost();
+            List<Row> rows = getRows(getNumberOfRows());
+            double result = calculateResult(rows, breakdownCost);
+            printer.println("Result is: $" + result);
+        } catch (NumberFormatException e) {
+            printer.println("Bad input value!");
+        }
     }
 
     private double calculateResult(List<Row> rows, double cost) {
