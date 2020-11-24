@@ -8,6 +8,11 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.List;
 
+/**
+ * Given the probabilities below, calculate the expected breakdown cost.
+ *
+ * @author Aleksander Konieczny
+ */
 public class BreakdownCostCalculator implements Algorithm {
 
     private final Scanner scanner = new Scanner(System.in);
