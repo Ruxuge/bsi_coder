@@ -28,12 +28,10 @@ public class App {
                 case 1:
                     caster.setAlgorithm(new Chipset());
                     caster.cast();
-
                     break;
                 case 2:
                     caster.setAlgorithm(new FailuresPerMonth());
                     caster.cast();
-
                     break;
                 case 3:
                     caster.setAlgorithm(new HighestFailureRateCalculator(scanner, printer));
@@ -60,7 +58,11 @@ public class App {
 
     private int getMenuOption() {
         printer.println("\nEnter your option:");
-        return Integer.parseInt(scanner.nextLine());
+        try {
+            return Integer.parseInt(scanner.nextLine());
+        } catch (NumberFormatException e) {
+            return -1;
+        }
     }
 
     private void printWelcomeMessage() {
