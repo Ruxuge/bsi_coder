@@ -22,6 +22,7 @@ public class ReliabilityChartDrawer implements Algorithm {
 
     private final Scanner scanner;
     private final PrintStream printer;
+    private ChartDrawer chartDrawer;
 
     public ReliabilityChartDrawer(Scanner scanner, PrintStream printer) {
         this.scanner = scanner;
@@ -34,33 +35,9 @@ public class ReliabilityChartDrawer implements Algorithm {
         TestUnit.initTransistorsValue = initTransistorValue;
         int numberOfRows = getNumberOfRows();
         List<TestUnit> units = getTestValues(numberOfRows, initTransistorValue);
-        drawFailureRateChart(units);
-        drawReliabilityChart(units);
-    }
-
-    private void drawReliabilityChart(List<TestUnit> units) {
-        final String name = "Reliability";
-        if(chartDrawAgreement(name)) {
-            XYSeries series = new XYSeries(name);
-            units.stream().forEach(e -> series.add(e.getTime(), e.getFailureRate()));
-            SwingUtilities.invokeLater(() -> new Chart(name, series));
-        }
-    }
-
-    private void drawFailureRateChart(List<TestUnit> units) {
-        final String name = "Failure Rate";
-        if(chartDrawAgreement(name)) {
-            XYSeries series = new XYSeries(name);
-            units.stream().forEach(e -> series.add(e.getTime(), e.getFailureRate()));
-            SwingUtilities.invokeLater(() -> new Chart(name, series));
-        }
-    }
-
-    private boolean chartDrawAgreement(String name) {
-        printer.format("Do you want to display %s char (Y/N)", name);
-        String in = scanner.nextLine();
-        if(in.toLowerCase().equals("y")) return true;
-        return false;
+        chartDrawer = new ChartDrawer(units, scanner, printer);
+        chartDrawer.drawFailureRateChart(units);
+        chartDrawer.drawReliabilityChart(units);
     }
 
     private int getInitialTransistorsValue() {
