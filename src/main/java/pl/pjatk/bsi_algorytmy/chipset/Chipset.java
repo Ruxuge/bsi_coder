@@ -26,7 +26,6 @@ public class Chipset implements Algorithm {
 
         OutPut outPut = new OutPut();
         outPut.statisticView();
-
     }
 
     @Override

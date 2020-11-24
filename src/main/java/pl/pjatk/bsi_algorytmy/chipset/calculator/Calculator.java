@@ -29,8 +29,8 @@ public class Calculator {
 
 
             //failuresPerMonth
-            testingStatistic.setFailuresPerMonth(testingStatistic.getFrPerTest() * (24 * 30));
+            testingStatistic.setFailuresPerMonth(testingStatistic.getFrPerTime() * 24 * 30 * 300);
 
-            testingStatistic.setMTBFinDays(testingStatistic.getMTBF() / 30);
+            testingStatistic.setMTBFinDays((1 / testingStatistic.getFailuresPerMonth()) * 30);
     }
 }

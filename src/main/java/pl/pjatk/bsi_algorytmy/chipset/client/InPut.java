@@ -1,7 +1,7 @@
 package pl.pjatk.bsi_algorytmy.chipset.client;
 
 import pl.pjatk.bsi_algorytmy.chipset.model.TestingStatistic;
-import pl.pjatk.bsi_algorytmy.failuresPerMonth.client.Setter;
+import pl.pjatk.bsi_algorytmy.chipset.validator.ScannerValidateInput;
 
 import java.util.Scanner;
 
@@ -23,6 +23,7 @@ import java.util.Scanner;
 // @author Filip Werra
 public class InPut {
     Scanner scanner = new Scanner(System.in);
+    ScannerValidateInput validate = new ScannerValidateInput();
 
     public void taker(TestingStatistic testingStatistic){
         //taking variables
@@ -31,21 +32,33 @@ public class InPut {
         String check = scanner.nextLine();
 
         if (check.equals("no") || check.equals("n")){
-            System.out.println("Veriables are set automatic.");
-            Setter setter = new Setter();
-            setter.setter();
+            System.out.println("Variables are set automatic.");
+            testingStatistic.setTestsNumber(300);
+            testingStatistic.setFailures(6);
+            testingStatistic.setTestTime(500);
+            testingStatistic.setDownTime(2000);
+
+
+            /*testingStatistic.setFrPerTime(0.0000405);
+            testingStatistic.setFrPerTest(0.02);
+            testingStatistic.setOperatingTime(148000);
+            testingStatistic.setMTBF(24691);
+            testingStatistic.setTotalTime(150000);*/
         }else {
 
-            System.out.printf("Give time of tests in hours: ");
-            testingStatistic.setTestTime(scanner.nextDouble());
+            System.out.print("Give time of tests in hours: ");
+            double doubleValue = validate.validate(scanner.next());
+            testingStatistic.setTestTime(doubleValue);
 
-            System.out.printf("Give number of Failures: ");
-            testingStatistic.setFailures(scanner.nextDouble());
+            System.out.print("Give number of Failures: ");
+            doubleValue = validate.validate(scanner.next());
+            testingStatistic.setFailures(doubleValue);
 
             failers(testingStatistic);
 
-            System.out.printf("Give number of Tests: ");
-            testingStatistic.setTestsNumber(scanner.nextDouble());
+            System.out.print("Give number of Tests: ");
+            doubleValue = validate.validate(scanner.next());
+            testingStatistic.setTestsNumber(doubleValue);
         }
 
     }
