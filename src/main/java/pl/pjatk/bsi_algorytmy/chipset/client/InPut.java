@@ -78,10 +78,12 @@ public class InPut {
         while (allFails > 0) {
 
             System.out.println("Time of fail: ");
-            int timeOfFail = scanner.nextInt();
+            doubleValue = validate.validate(scanner.next());
+            int timeOfFail = (int) doubleValue;
 
             System.out.println("Num of failed Chips: ");
-            int numOfChips = scanner.nextInt();
+            doubleValue = validate.validate(scanner.next());
+            int numOfChips = (int) doubleValue;
 
             int testPattern = numOfChips * (testTime - timeOfFail);
 
