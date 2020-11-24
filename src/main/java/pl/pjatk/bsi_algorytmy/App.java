@@ -30,15 +30,15 @@ public class App {
 
                     break;
                 case 3:
-                    caster.setAlgorithm(new HighestFailureRateCalculator());
+                    caster.setAlgorithm(new HighestFailureRateCalculator(scanner, printer));
                     caster.cast();
                     break;
                 case 4:
-                    caster.setAlgorithm(new ReliabilityChartDrawer());
+                    caster.setAlgorithm(new ReliabilityChartDrawer(scanner, printer));
                     caster.cast();
                     break;
                 case 5:
-                    caster.setAlgorithm(new BreakdownCostCalculator());
+                    caster.setAlgorithm(new BreakdownCostCalculator(scanner, printer));
                     caster.cast();
                     break;
                 case 0:

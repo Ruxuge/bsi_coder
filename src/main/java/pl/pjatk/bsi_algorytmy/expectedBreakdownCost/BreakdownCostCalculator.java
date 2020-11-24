@@ -15,8 +15,13 @@ import java.util.List;
  */
 public class BreakdownCostCalculator implements Algorithm {
 
-    private final Scanner scanner = new Scanner(System.in);
-    private final PrintStream printer = System.out;
+    private final Scanner scanner;
+    private final PrintStream printer;
+
+    public BreakdownCostCalculator(Scanner scanner, PrintStream printer) {
+        this.scanner = scanner;
+        this.printer = printer;
+    }
 
     @Override
     public void use() {

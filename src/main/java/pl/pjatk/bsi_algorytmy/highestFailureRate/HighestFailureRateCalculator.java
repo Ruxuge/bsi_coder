@@ -13,8 +13,13 @@ import java.util.Scanner;
  */
 public class HighestFailureRateCalculator implements Algorithm {
 
-    private final Scanner scanner = new Scanner(System.in);
-    private final PrintStream printer = System.out;
+    private final Scanner scanner;
+    private final PrintStream printer;
+
+    public HighestFailureRateCalculator(Scanner scanner, PrintStream printer) {
+        this.scanner = scanner;
+        this.printer = printer;
+    }
 
     @Override
     public void use() {
