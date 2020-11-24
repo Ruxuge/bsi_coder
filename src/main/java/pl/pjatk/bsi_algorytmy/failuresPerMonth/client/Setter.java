@@ -17,7 +17,7 @@ import pl.pjatk.bsi_algorytmy.chipset.model.TestingStatistic;
  *Therefore: FR(N) = 6/148,000 = 0.0000405 failures/hour
  *MTBF = 1/FR(N) = 24,691 hours
  */
-
+// @author Filip Werra
 public class Setter {
     public void setter(){
         TestingStatistic testingStatistic = new TestingStatistic();

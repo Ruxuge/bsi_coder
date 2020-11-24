@@ -1,5 +1,5 @@
 package pl.pjatk.bsi_algorytmy.chipset.model;
-
+// @author Filip Werra
 public class TestingStatistic {
 
     private double frPerTest;

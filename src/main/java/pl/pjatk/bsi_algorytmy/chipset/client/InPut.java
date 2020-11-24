@@ -20,7 +20,7 @@ import java.util.Scanner;
  Therefore: FR(N) = 6/148,000 = 0.0000405 failures/hour
  MTBF = 1/FR(N) = 24,691 hours
  */
-
+// @author Filip Werra
 public class InPut {
     Scanner scanner = new Scanner(System.in);
 

@@ -3,7 +3,7 @@ package pl.pjatk.bsi_algorytmy.failuresPerMonth.client;
 import pl.pjatk.bsi_algorytmy.chipset.model.TestingStatistic;
 
 import java.util.Scanner;
-
+// @author Filip Werra
 public class InPut {
     Scanner scanner = new Scanner(System.in);
 

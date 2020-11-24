@@ -22,7 +22,7 @@ MTBF = 1/FR(N) = 1/8.75 = 0.11 month = 0.11 * 30 = 3.4 days
 Calculation for MTBF assumes that failure of any one chip brings down entire system.
 
 */
-
+// @author Filip Werra
 public class OutPut {
     public void statisticView() {
         Calculator calculator = new Calculator();

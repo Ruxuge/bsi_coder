@@ -2,7 +2,7 @@ package pl.pjatk.bsi_algorytmy.chipset.client;
 
 import pl.pjatk.bsi_algorytmy.chipset.calculator.Calculator;
 import pl.pjatk.bsi_algorytmy.chipset.model.TestingStatistic;
-
+// @author Filip Werra
 public class OutPut {
     public void statisticView(){
         Calculator calculator = new Calculator();

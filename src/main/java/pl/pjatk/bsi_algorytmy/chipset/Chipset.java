@@ -18,6 +18,8 @@ import pl.pjatk.bsi_algorytmy.chipset.client.OutPut;
 *MTBF = 1/FR(N) = 24,691 hours
 */
 
+// @author Filip Werra
+
 public class Chipset implements Algorithm {
 
     public static void main(String[] args) {
