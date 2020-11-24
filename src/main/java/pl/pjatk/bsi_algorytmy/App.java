@@ -4,6 +4,7 @@ import pl.pjatk.bsi_algorytmy.chipset.Chipset;
 import pl.pjatk.bsi_algorytmy.expectedBreakdownCost.BreakdownCostCalculator;
 import pl.pjatk.bsi_algorytmy.failuresPerMonth.FailuresPerMonth;
 import pl.pjatk.bsi_algorytmy.highestFailureRate.HighestFailureRateCalculator;
+import pl.pjatk.bsi_algorytmy.reliabilityChart.ReliabilityChartDrawer;
 
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -35,14 +36,15 @@ public class App {
 
                     break;
                 case 3:
-                    caster.setAlgorithm(new HighestFailureRateCalculator());
+                    caster.setAlgorithm(new HighestFailureRateCalculator(scanner, printer));
                     caster.cast();
                     break;
                 case 4:
-
+                    caster.setAlgorithm(new ReliabilityChartDrawer(scanner, printer));
+                    caster.cast();
                     break;
                 case 5:
-                    caster.setAlgorithm(new BreakdownCostCalculator());
+                    caster.setAlgorithm(new BreakdownCostCalculator(scanner, printer));
                     caster.cast();
                     break;
                 case 0:
@@ -66,7 +68,7 @@ public class App {
                 "\n\t 1 - Chipset test statistics" +
                 "\n\t 2 - Failures per month" +
                 "\n\t 3 - Highest failure rate " +
-                "\n\t 4 - alg4" +
+                "\n\t 4 - Reliability chart drawer" +
                 "\n\t 5 - Breakdown cost calculator");
     }
 

@@ -8,17 +8,31 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.List;
 
+/**
+ * Given the probabilities below, calculate the expected breakdown cost.
+ *
+ * @author Aleksander Konieczny
+ */
 public class BreakdownCostCalculator implements Algorithm {
 
-    private final Scanner scanner = new Scanner(System.in);
-    private final PrintStream printer = System.out;
+    private final Scanner scanner;
+    private final PrintStream printer;
+
+    public BreakdownCostCalculator(Scanner scanner, PrintStream printer) {
+        this.scanner = scanner;
+        this.printer = printer;
+    }
 
     @Override
     public void use() {
-        double breakdownCost = getBreakdownCost();
-        List<Row> rows = getRows(getNumberOfRows());
-        double result = calculateResult(rows, breakdownCost);
-        printer.println("Result is: $" + result);
+        try {
+            double breakdownCost = getBreakdownCost();
+            List<Row> rows = getRows(getNumberOfRows());
+            double result = calculateResult(rows, breakdownCost);
+            printer.println("Result is: $" + result);
+        } catch (NumberFormatException e) {
+            printer.println("Bad input value!");
+        }
     }
 
     private double calculateResult(List<Row> rows, double cost) {
