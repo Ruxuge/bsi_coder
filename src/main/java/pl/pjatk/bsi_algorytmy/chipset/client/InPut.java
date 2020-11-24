@@ -35,6 +35,7 @@ public class InPut {
             Setter setter = new Setter();
             setter.setter();
         }else {
+
             System.out.printf("Give time of tests in hours: ");
             testingStatistic.setTestTime(scanner.nextDouble());
 
