@@ -2,6 +2,7 @@ package pl.pjatk.bsi_algorytmy;
 
 import pl.pjatk.bsi_algorytmy.expectedBreakdownCost.BreakdownCostCalculator;
 import pl.pjatk.bsi_algorytmy.highestFailureRate.HighestFailureRateCalculator;
+import pl.pjatk.bsi_algorytmy.reliabilityChart.ReliabilityChartDrawer;
 
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -33,7 +34,8 @@ public class App {
                     caster.cast();
                     break;
                 case 4:
-
+                    caster.setAlgorithm(new ReliabilityChartDrawer());
+                    caster.cast();
                     break;
                 case 5:
                     caster.setAlgorithm(new BreakdownCostCalculator());
@@ -60,7 +62,7 @@ public class App {
                 "\n\t 1 - alg1" +
                 "\n\t 2 - alg2" +
                 "\n\t 3 - Highest failure rate " +
-                "\n\t 4 - alg4" +
+                "\n\t 4 - Reliability chart drawer" +
                 "\n\t 5 - Breakdown cost calculator");
     }
 

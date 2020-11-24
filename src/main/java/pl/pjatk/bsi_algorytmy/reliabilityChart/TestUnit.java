@@ -1,22 +1,24 @@
-package pl.pjatk.bsi_algorytmy.alg4;
+package pl.pjatk.bsi_algorytmy.reliabilityChart;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class TestUnit {
 
-    private int time;
-    private int transistors;
-    private int failures;
+    public static int initTransistorsValue;
+
+    private double time;
+    private double transistors;
+    private double failures;
     private double reliability;
     private double failureRate;
 
-    public TestUnit(int time, int transistors, int failures) {
+    public TestUnit(double time, double transistors, double failures) {
         this.time = time;
         this.transistors = transistors;
         this.failures = failures;
-        this.reliability =  getDouble((double)transistors / (double)Main.initTransistors);
-        this.failureRate = failures == 0 ? 0 : getDouble((double)failures / (double)transistors);
+        this.reliability =  getDouble(transistors / (double) initTransistorsValue);
+        this.failureRate = failures == 0 ? 0 : getDouble(failures / transistors);
     }
 
     private double getDouble(double value) {
@@ -24,27 +26,27 @@ public class TestUnit {
         return bd.doubleValue();
     }
 
-    public int getTime() {
+    public double getTime() {
         return time;
     }
 
-    public void setTime(int time) {
+    public void setTime(double time) {
         this.time = time;
     }
 
-    public int getTransistors() {
+    public double getTransistors() {
         return transistors;
     }
 
-    public void setTransistors(int transistors) {
+    public void setTransistors(double transistors) {
         this.transistors = transistors;
     }
 
-    public int getFailures() {
+    public double getFailures() {
         return failures;
     }
 
-    public void setFailures(int failures) {
+    public void setFailures(double failures) {
         this.failures = failures;
     }
 

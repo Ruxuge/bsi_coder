@@ -1,4 +1,4 @@
-package pl.pjatk.bsi_algorytmy.alg4;
+package pl.pjatk.bsi_algorytmy.reliabilityChart;
 
 import javax.swing.*;
 import java.util.*;
@@ -13,7 +13,7 @@ import java.util.*;
  */
 class Main {
 
-    public static int initTransistors = 1000;
+   /* public static int initTransistors = 1000;
 
     private static List<TestUnit> getTestValues() {
         ArrayList<TestUnit> unitList = new ArrayList<>();
@@ -31,14 +31,14 @@ class Main {
         return unitList;
     }
 
-    private static int calculateTransistorsValue(TestUnit unit) {
+    private static double calculateTransistorsValue(TestUnit unit) {
         return unit.getTransistors() - unit.getFailures();
     }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            new Chart("Failure Rate", getTestValues(), true);
-            new Chart("Reliability", getTestValues(), false);
+            new Chart("Failure Rate", getTestValues());
+            new Chart("Reliability", getTestValues());
         });
-    }
+    }*/
 }
