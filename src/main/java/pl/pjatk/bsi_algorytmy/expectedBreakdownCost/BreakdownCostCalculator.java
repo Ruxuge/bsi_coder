@@ -56,6 +56,7 @@ public class BreakdownCostCalculator implements Algorithm {
         for (int n = 0; n < numberOfRows; n++) {
             String inputString = scanner.nextLine();
             double[] input = stringToDoubleArray(inputString);
+            if (input.length < 2) throw new NumberFormatException();
             rows.add(new Row(input[0], input[1]));
         }
 

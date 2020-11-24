@@ -61,6 +61,7 @@ public class ReliabilityChartDrawer implements Algorithm {
         for (int n = 0; n < numberOfRows; n++) {
             String inputString = scanner.nextLine();
             double[] input = stringToDoubleArray(inputString);
+            if (input.length < 2) throw new NumberFormatException();
             TestUnit current = new TestUnit(input[0], n == 0 ? (double)initTransistorsNumber : calculateTransistorsValue(list.get(list.size() - 1)), input[1]);
             list.add(current);
         }
