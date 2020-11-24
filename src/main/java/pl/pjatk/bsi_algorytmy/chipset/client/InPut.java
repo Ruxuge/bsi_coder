@@ -1,6 +1,7 @@
 package pl.pjatk.bsi_algorytmy.chipset.client;
 
 import pl.pjatk.bsi_algorytmy.chipset.model.TestingStatistic;
+import pl.pjatk.bsi_algorytmy.failuresPerMonth.client.Setter;
 
 import java.util.Scanner;
 
@@ -26,17 +27,25 @@ public class InPut {
     public void taker(TestingStatistic testingStatistic){
         //taking variables
 
-        System.out.printf("Give time of tests: ");
-        testingStatistic.setTestTime(scanner.nextDouble());
+        System.out.println("Dou you want enter all variables manually? yes/no");
+        String check = scanner.nextLine();
 
-        System.out.printf("Give number of Failures: ");
-        testingStatistic.setFailures(scanner.nextDouble());
+        if (check.equals("no") || check.equals("n")){
+            System.out.println("Veriables are set automatic.");
+            Setter setter = new Setter();
+            setter.setter();
+        }else {
+            System.out.printf("Give time of tests in hours: ");
+            testingStatistic.setTestTime(scanner.nextDouble());
 
-        failers(testingStatistic);
+            System.out.printf("Give number of Failures: ");
+            testingStatistic.setFailures(scanner.nextDouble());
 
-        System.out.printf("Give number of Tests: ");
-        testingStatistic.setTestsNumber(scanner.nextDouble());
+            failers(testingStatistic);
 
+            System.out.printf("Give number of Tests: ");
+            testingStatistic.setTestsNumber(scanner.nextDouble());
+        }
 
     }
 
