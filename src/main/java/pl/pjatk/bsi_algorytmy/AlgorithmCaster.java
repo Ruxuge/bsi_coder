@@ -8,6 +8,7 @@ public class AlgorithmCaster {
         algorithm.use();
     }
 
+
     public void setAlgorithm(Algorithm algorithm) {
         this.algorithm = algorithm;
     }

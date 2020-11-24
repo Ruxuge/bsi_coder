@@ -1,6 +1,8 @@
 package pl.pjatk.bsi_algorytmy;
 
+import pl.pjatk.bsi_algorytmy.chipset.Chipset;
 import pl.pjatk.bsi_algorytmy.expectedBreakdownCost.BreakdownCostCalculator;
+import pl.pjatk.bsi_algorytmy.failuresPerMonth.FailuresPerMonth;
 import pl.pjatk.bsi_algorytmy.highestFailureRate.HighestFailureRateCalculator;
 
 import java.io.PrintStream;
@@ -23,9 +25,13 @@ public class App {
 
             switch (option) {
                 case 1:
+                    caster.setAlgorithm(new Chipset());
+                    caster.cast();
 
                     break;
                 case 2:
+                    caster.setAlgorithm(new FailuresPerMonth());
+                    caster.cast();
 
                     break;
                 case 3:
@@ -57,8 +63,8 @@ public class App {
 
     private void printWelcomeMessage() {
         printer.println("Select option: " +
-                "\n\t 1 - alg1" +
-                "\n\t 2 - alg2" +
+                "\n\t 1 - Chipset test statistics" +
+                "\n\t 2 - Failures per month" +
                 "\n\t 3 - Highest failure rate " +
                 "\n\t 4 - alg4" +
                 "\n\t 5 - Breakdown cost calculator");

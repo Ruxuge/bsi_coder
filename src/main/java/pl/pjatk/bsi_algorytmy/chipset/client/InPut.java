@@ -69,4 +69,5 @@ public class InPut {
         testingStatistic.setDownTime(downtime);
     }
 
+
 }

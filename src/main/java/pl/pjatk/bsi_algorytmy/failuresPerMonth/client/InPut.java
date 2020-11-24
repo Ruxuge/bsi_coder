@@ -13,11 +13,13 @@ public class InPut {
         System.out.printf("Give number of tested Chips: ");
         testingStatistic.setNumberOfChips(scanner.nextDouble());
 
-        System.out.println("Dou you want enter all variables manually? (1 = yes/2 = no)");
+        System.out.println("Dou you want enter all variables manually? (1 = yes/0 = no)");
         Boolean check = scanner.nextBoolean();
 
-        if (check == true){
-            //Setter();
+        if (!check){
+            System.out.println("Veriables are set automatic.");
+            Setter setter = new Setter();
+            setter.setter();
         }
 
     }
