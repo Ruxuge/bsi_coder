@@ -1,5 +1,8 @@
 package pl.pjatk.bsi_algorytmy.expectedBreakdownCost;
 
+/**
+ * @author Aleksander Konieczny
+ */
 public class Row {
 
     private double numberOfBreakdowns;

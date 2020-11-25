@@ -10,6 +10,9 @@ import org.jfree.data.xy.XYSeriesCollection;
 import javax.swing.*;
 import java.util.List;
 
+/**
+ * @author Aleksander Konieczny
+ */
 public class Chart extends JFrame {
 
     public Chart(String name, XYSeries series) {
