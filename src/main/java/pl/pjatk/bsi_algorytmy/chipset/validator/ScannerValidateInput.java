@@ -14,9 +14,9 @@ public class ScannerValidateInput {
 
             boolean match = Pattern.matches(decimalPattern, number);
             while(!match){
+                System.out.println("Enter positive number");
                 number = scanner.next();
                 match = Pattern.matches(decimalPattern, number);
-                System.out.println("Enter positive number");
             }
             return Double.parseDouble(number);
 
