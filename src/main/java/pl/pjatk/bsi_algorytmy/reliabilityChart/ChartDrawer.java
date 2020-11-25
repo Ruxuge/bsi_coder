@@ -7,9 +7,6 @@ import java.io.PrintStream;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * @author Aleksander Konieczny
- */
 public class ChartDrawer {
 
     private final List<TestUnit> data;

@@ -3,9 +3,6 @@ package pl.pjatk.bsi_algorytmy.reliabilityChart;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-/**
- * @author Aleksander Konieczny
- */
 public class TestUnit {
 
     public static int initTransistorsValue;

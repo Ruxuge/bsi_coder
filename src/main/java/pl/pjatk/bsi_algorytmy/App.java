@@ -9,9 +9,6 @@ import pl.pjatk.bsi_algorytmy.reliabilityChart.ReliabilityChartDrawer;
 import java.io.PrintStream;
 import java.util.Scanner;
 
-/**
- * @author Aleksander Konieczny
- */
 public class App {
 
     private final AlgorithmCaster caster = new AlgorithmCaster();

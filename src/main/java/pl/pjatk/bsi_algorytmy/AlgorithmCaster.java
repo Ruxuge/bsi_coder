@@ -1,8 +1,5 @@
 package pl.pjatk.bsi_algorytmy;
 
-/**
- * @author Aleksander Konieczny
- */
 public class AlgorithmCaster {
 
     private Algorithm algorithm;
