@@ -1,4 +1,9 @@
 package pl.pjatk.bsi_algorytmy.aes;
 
-public class Aes {
+import pl.pjatk.bsi_algorytmy.Algorithm;
+
+public class Aes implements Algorithm {
+    public void use(){
+
+    }
 }

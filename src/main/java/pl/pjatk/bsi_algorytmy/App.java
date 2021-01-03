@@ -1,5 +1,8 @@
 package pl.pjatk.bsi_algorytmy;
 
+import pl.pjatk.bsi_algorytmy.aes.Aes;
+import pl.pjatk.bsi_algorytmy.rc5.Rc5;
+import pl.pjatk.bsi_algorytmy.salting.Salt;
 import pl.pjatk.bsi_algorytmy.tDes.TripleDes;
 
 import java.io.PrintStream;
@@ -32,6 +35,9 @@ public class App {
                 case 3:
                     caster.setAlgorithm((new TripleDes()));
                     caster.cast();
+                case 4:
+                    caster.setAlgorithm((new Salt()));
+                    caster.cast();
                 case 0:
                     keepRunning = false;
                     printer.println("Goodbye!");
@@ -56,7 +62,9 @@ public class App {
         printer.println("Select option: " +
                 "\n\t 1 - RC5"+
                 "\n\t 2 - AES"+
-                "\n\t 3 - 3DES");
+                "\n\t 3 - 3DES"+
+                "\n\t 4 - Salting"
+        );
     }
 
     public static void main(String[] args) {
