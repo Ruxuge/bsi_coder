@@ -1,10 +1,6 @@
 package pl.pjatk.bsi_algorytmy;
 
-import pl.pjatk.bsi_algorytmy.chipset.Chipset;
-import pl.pjatk.bsi_algorytmy.expectedBreakdownCost.BreakdownCostCalculator;
-import pl.pjatk.bsi_algorytmy.failuresPerMonth.FailuresPerMonth;
-import pl.pjatk.bsi_algorytmy.highestFailureRate.HighestFailureRateCalculator;
-import pl.pjatk.bsi_algorytmy.reliabilityChart.ReliabilityChartDrawer;
+import pl.pjatk.bsi_algorytmy.tDes.TripleDes;
 
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -26,25 +22,16 @@ public class App {
 
             switch (option) {
                 case 1:
-                    caster.setAlgorithm(new Chipset());
+                    caster.setAlgorithm(new Rc5());
                     caster.cast();
                     break;
                 case 2:
-                    caster.setAlgorithm(new FailuresPerMonth());
+                    caster.setAlgorithm(new Aes());
                     caster.cast();
                     break;
                 case 3:
-                    caster.setAlgorithm(new HighestFailureRateCalculator(scanner, printer));
+                    caster.setAlgorithm((new TripleDes()));
                     caster.cast();
-                    break;
-                case 4:
-                    caster.setAlgorithm(new ReliabilityChartDrawer(scanner, printer));
-                    caster.cast();
-                    break;
-                case 5:
-                    caster.setAlgorithm(new BreakdownCostCalculator(scanner, printer));
-                    caster.cast();
-                    break;
                 case 0:
                     keepRunning = false;
                     printer.println("Goodbye!");
@@ -67,11 +54,9 @@ public class App {
 
     private void printWelcomeMessage() {
         printer.println("Select option: " +
-                "\n\t 1 - Chipset test statistics" +
-                "\n\t 2 - Failures per month" +
-                "\n\t 3 - Highest failure rate " +
-                "\n\t 4 - Reliability chart drawer" +
-                "\n\t 5 - Breakdown cost calculator");
+                "\n\t 1 - RC5"+
+                "\n\t 2 - AES"+
+                "\n\t 3 - 3DES");
     }
 
     public static void main(String[] args) {
