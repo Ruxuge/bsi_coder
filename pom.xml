@@ -9,7 +9,9 @@
     <version>1.0-SNAPSHOT</version>
 
     <build>
+
         <plugins>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -19,10 +21,13 @@
                 </configuration>
 
             </plugin>
+
         </plugins>
+
     </build>
 
     <dependencies>
+
         <dependency>
             <groupId>org.jfree</groupId>
             <artifactId>jfreechart</artifactId>
@@ -68,7 +73,6 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.3.2</version>
         </dependency>
-
 
     </dependencies>
 

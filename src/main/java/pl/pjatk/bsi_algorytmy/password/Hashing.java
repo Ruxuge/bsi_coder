@@ -7,15 +7,26 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.Scanner;
 
-
+/**
+ * This class is hashing text from user.
+ * To Hash text program is using salting. All salt is generate in salt().
+ * All data is save in saltFile.out
+ *
+ * @author Filip Werra s19375
+ */
 public class Hashing implements Algorithm {
     Scanner scanner = new Scanner(System.in);
 
+
+    /**
+     * Use() is main class and it is run from App class.
+     * Use is taking string from user and hash it with salting.
+     * Every thing is saved in file with BufferWritter.
+     */
     public void use() {
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
@@ -50,6 +61,12 @@ public class Hashing implements Algorithm {
         }
     }
 
+    /**
+     * Writer is function to save text, salt and hashed date in file.
+     *
+     * @param text <- text which will be saved in file. It can be text given by user, salt or hashed text.
+     * @throws IOException
+     */
     public void Writer(String text)
             throws IOException {
                 String str = text;
@@ -60,6 +77,11 @@ public class Hashing implements Algorithm {
                 writer.close();
     }
 
+    /**
+     * Salt() is generator of salt. Which is used to make save hashing.
+     *
+     * @return random salt.
+     */
     public byte[] Salt() {
         SecureRandom random = new SecureRandom();
         byte[] bytes = new byte[64];

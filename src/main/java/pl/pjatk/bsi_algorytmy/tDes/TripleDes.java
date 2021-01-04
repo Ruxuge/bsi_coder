@@ -8,7 +8,7 @@ import pl.pjatk.bsi_algorytmy.Algorithm;
 import java.util.Scanner;
 
 /**
- * Encrypt/Decrypt text2text by using Triple-DES
+ * Encrypt/Decrypt text by using Triple-DES
  *
  * @author Filip Werra
  */
