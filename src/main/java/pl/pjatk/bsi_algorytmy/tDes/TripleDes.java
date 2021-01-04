@@ -4,7 +4,6 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import pl.pjatk.bsi_algorytmy.Algorithm;
-import pl.pjatk.bsi_algorytmy.chipset.validator.ScannerValidateInput;
 
 import java.util.Scanner;
 
@@ -16,7 +15,6 @@ import java.util.Scanner;
 public class TripleDes implements Algorithm{
 
     Scanner scanner = new Scanner(System.in);
-    ScannerValidateInput validate = new ScannerValidateInput();
 
     private static final String CRYPT_ALGORITHM = "DESede";
     private static final String PADDING = "DESede/CBC/NoPadding";
