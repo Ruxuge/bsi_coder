@@ -4,7 +4,7 @@ public class AlgorithmCaster {
 
     private Algorithm algorithm;
 
-    public void cast() {
+    public void cast(){
         algorithm.use();
     }
 

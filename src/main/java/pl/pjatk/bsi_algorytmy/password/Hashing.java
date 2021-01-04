@@ -1,6 +1,7 @@
 package pl.pjatk.bsi_algorytmy.password;
 
 import pl.pjatk.bsi_algorytmy.Algorithm;
+import pl.pjatk.bsi_algorytmy.CpuUtils;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -19,6 +20,10 @@ import java.util.Scanner;
  * @author Filip Werra s19375
  */
 public class Hashing implements Algorithm {
+
+    //CpuUtils tester = new CpuUtils();
+    //System.out.println(getCpuTime());
+
     Scanner scanner = new Scanner(System.in);
 
 

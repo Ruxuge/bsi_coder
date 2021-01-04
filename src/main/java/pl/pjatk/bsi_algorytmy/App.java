@@ -1,12 +1,20 @@
 package pl.pjatk.bsi_algorytmy;
 
 import pl.pjatk.bsi_algorytmy.aes.Aes;
+import pl.pjatk.bsi_algorytmy.des.Des;
 import pl.pjatk.bsi_algorytmy.password.Hashing;
 import pl.pjatk.bsi_algorytmy.rc5.Rc5;
+import pl.pjatk.bsi_algorytmy.rsa.Rsa;
 import pl.pjatk.bsi_algorytmy.tDes.TripleDes;
 
 import java.io.PrintStream;
 import java.util.Scanner;
+
+/**
+ * App is class with menu based on case and welcome message.
+ *
+ * @author Filip Werra s19375
+ */
 
 public class App {
 
@@ -16,6 +24,9 @@ public class App {
 
     private boolean keepRunning = true;
 
+    /**
+     * Run() is menu with cases.
+     */
     public void run() {
         printWelcomeMessage();
 
@@ -38,7 +49,13 @@ public class App {
                 case 4:
                     caster.setAlgorithm((new Hashing()));
                     caster.cast();
-                case 0:
+                case 5:
+                    caster.setAlgorithm(new Rsa());
+                    caster.cast();
+                case 6:
+                    caster.setAlgorithm(new Des());
+                    caster.cast();
+                    case 0:
                     keepRunning = false;
                     printer.println("Goodbye!");
                     break;
@@ -49,6 +66,12 @@ public class App {
         }
     }
 
+    /**
+     * This class is taking number from user and it used in run to choose option.
+     *
+     *
+     * @return number of option in menu.
+     */
     private int getMenuOption() {
         printer.println("\nEnter your option:");
         try {
@@ -58,15 +81,26 @@ public class App {
         }
     }
 
+    /**
+     * Function to print Welcome message with menu.
+     */
     private void printWelcomeMessage() {
         printer.println("Select option: " +
                 "\n\t 1 - RC5"+
                 "\n\t 2 - AES"+
                 "\n\t 3 - 3DES"+
-                "\n\t 4 - Hashing"
+                "\n\t 4 - Hashing"+
+                "\n\t 5 - Rsa"+
+                "\n\t 6 - Des"
+
         );
     }
 
+    /**
+     * Min class is starting program.
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         new App().run();
     }

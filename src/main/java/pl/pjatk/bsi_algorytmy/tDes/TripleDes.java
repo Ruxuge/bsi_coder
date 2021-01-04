@@ -10,6 +10,8 @@ import java.util.Scanner;
 /**
  * Encrypt/Decrypt text by using Triple-DES
  *
+ * source: https://gist.github.com/riversun
+ *
  * @author Filip Werra
  */
 public class TripleDes implements Algorithm{
@@ -23,32 +25,13 @@ public class TripleDes implements Algorithm{
     private static final byte[] MY_KEY = "5oquil2oo2vb63e8ionujny6".getBytes();//24-byte
     private static final byte[] MY_IV = "3oco1v52".getBytes();//8-byte
 
-    public static void main(String[] args) {
-
-        //must be multiple of 8
-        String srcText = "To jest";
-
-        // create crypter
-        final TripleDes crypter = new TripleDes();
-
-        // do encrypt
-        String encryptedText = crypter.encrypt(srcText);
-
-        // show result
-        System.out.println("sourceText=" + srcText + " -> encryptedText=" + encryptedText + "\n");
-
-        System.out.println("encrypted-text=" + encryptedText + " -> decrypted-text(source text)="
-                + crypter.decrypt(encryptedText));
-    }
-
-    @Override
+    /**
+     *
+     */
     public void use(){
 
         System.out.println("Input your text to code");
         String srcMyText = scanner.nextLine();
-
-        //must be multiple of 8
-        String srcText = "01234567";
 
         // create crypter
         final TripleDes crypter = new TripleDes();
