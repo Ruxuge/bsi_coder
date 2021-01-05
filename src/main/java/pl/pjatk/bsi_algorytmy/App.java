@@ -3,7 +3,7 @@ package pl.pjatk.bsi_algorytmy;
 import pl.pjatk.bsi_algorytmy.aes.Aes;
 import pl.pjatk.bsi_algorytmy.dsa.Dsa;
 import pl.pjatk.bsi_algorytmy.password.Hashing;
-import pl.pjatk.bsi_algorytmy.rc5.Rc5;
+import pl.pjatk.bsi_algorytmy.rc5.RC5;
 import pl.pjatk.bsi_algorytmy.rsa.Rsa;
 import pl.pjatk.bsi_algorytmy.tDes.TripleDes;
 
@@ -36,7 +36,7 @@ public class App {
 
             switch (option) {
                 case 1:
-                    caster.setAlgorithm(new Rc5());
+                    caster.setAlgorithm(new RC5());
                     caster.cast();
                     break;
                 case 2:
