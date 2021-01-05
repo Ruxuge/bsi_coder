@@ -1,7 +1,7 @@
 package pl.pjatk.bsi_algorytmy;
 
 import pl.pjatk.bsi_algorytmy.aes.Aes;
-import pl.pjatk.bsi_algorytmy.des.Des;
+import pl.pjatk.bsi_algorytmy.dsa.Dsa;
 import pl.pjatk.bsi_algorytmy.password.Hashing;
 import pl.pjatk.bsi_algorytmy.rc5.Rc5;
 import pl.pjatk.bsi_algorytmy.rsa.Rsa;
@@ -53,9 +53,9 @@ public class App {
                     caster.setAlgorithm(new Rsa());
                     caster.cast();
                 case 6:
-                    caster.setAlgorithm(new Des());
+                    caster.setAlgorithm(new Dsa());
                     caster.cast();
-                    case 0:
+                case 0:
                     keepRunning = false;
                     printer.println("Goodbye!");
                     break;
