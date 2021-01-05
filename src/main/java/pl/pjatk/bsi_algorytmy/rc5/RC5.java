@@ -4,9 +4,7 @@ import java.util.Arrays;
 
 import pl.pjatk.bsi_algorytmy.Algorithm;
 /**
- * This class is hashing text from user.
- * To Hash text program is using salting. All salt is generate in salt().
- * All data is save in saltFile.out
+ * App to encrypt and decrypt any hex message using RC5.
  *
  * @author Filip Magdziak s19616
  */
@@ -18,16 +16,16 @@ public class RC5 implements Algorithm {
         System.out.println("Encryption");
         RC5Enc enc = new RC5Enc();
         enc.encrypt();
-        System.out.println("Encryption");
+        System.out.println("Decryption");
         RC5Dec dec = new RC5Dec();
         dec.decrypt();
     }
+
     public void use(){
         try{
             main(avs);
         }catch(Exception e){
             System.out.println(e);
         }
-
     }
 }

@@ -1,6 +1,6 @@
 package pl.pjatk.bsi_algorytmy;
 
-import pl.pjatk.bsi_algorytmy.aes.Aes;
+import pl.pjatk.bsi_algorytmy.aes.AES;
 import pl.pjatk.bsi_algorytmy.dsa.Dsa;
 import pl.pjatk.bsi_algorytmy.password.Hashing;
 import pl.pjatk.bsi_algorytmy.rc5.RC5;
@@ -40,7 +40,7 @@ public class App {
                     caster.cast();
                     break;
                 case 2:
-                    caster.setAlgorithm(new Aes());
+                    caster.setAlgorithm(new AES());
                     caster.cast();
                     break;
                 case 3:
