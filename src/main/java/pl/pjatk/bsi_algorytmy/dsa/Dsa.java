@@ -11,6 +11,11 @@ import java.security.Signature;
 import java.util.Scanner;
 import java.util.Base64;
 
+/**
+ * Algorithm to secure date with DSA
+ *
+ * @author Filip Werra s19375
+ */
 
 public class Dsa implements Algorithm{
 
