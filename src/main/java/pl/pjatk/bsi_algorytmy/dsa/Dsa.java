@@ -19,16 +19,22 @@ import java.util.Base64;
 
 public class Dsa implements Algorithm{
 
-    // Signing Algorithm
+    /**
+     * Signing Algorithm
+     */
     private static final String
             SIGNING_ALGORITHM
             = "SHA256withRSA";
     private static final String RSA = "RSA";
     public static Scanner sc;
 
-    // Function to implement Digital signature
-    // using SHA256 and RSA algorithm
-    // by passing private key.
+    /**
+     *Function to implement Digital signature
+     * using SHA256 and RSA algorithm
+     * by passing private key.
+     *
+     */
+
     public static byte[] Create_Digital_Signature(
             byte[] input,
             PrivateKey Key)
@@ -42,9 +48,16 @@ public class Dsa implements Algorithm{
         return signature.sign();
     }
 
-    // Generating the asymmetric key pair
-    // using SecureRandom class
-    // functions and RSA algorithm.
+    /**
+     *
+     * Generating the asymmetric key pair
+     * using SecureRandom class
+     * functions and RSA algorithm.
+     *
+     * @return key pair
+     * @throws Exception
+     */
+
     public static KeyPair Generate_RSA_KeyPair()
             throws Exception
     {
@@ -60,8 +73,16 @@ public class Dsa implements Algorithm{
                 .generateKeyPair();
     }
 
-    // Function for Verification of the
-    // digital signature by using the public key
+    /**
+     * Function for Verification of the
+     * digital signature by using the public key
+     *
+     * @param input
+     * @param signatureToVerify
+     * @param key
+     * @return
+     * @throws Exception
+     */
     public static boolean
     Verify_Digital_Signature(
             byte[] input,
@@ -78,7 +99,10 @@ public class Dsa implements Algorithm{
                 .verify(signatureToVerify);
     }
 
-    // Driver Code
+    /**
+     * Driver Code
+     *
+     */
     public void use()
     {
         try {
@@ -91,7 +115,6 @@ public class Dsa implements Algorithm{
             KeyPair keyPair
                     = Generate_RSA_KeyPair();
 
-            // Function Call
             byte[] signature
                     = Create_Digital_Signature(
                     input.getBytes(),

@@ -24,9 +24,13 @@ public class Rsa implements Algorithm {
         return pair;
     }
 
+    /**
+     *This function is genereting keys
+     *
+     * @return pair of keys
+     * @throws Exception
+     */
     public static KeyPair getKeyPairFromKeyStore() throws Exception {
-        //Generated with:
-        //  keytool -genkeypair -alias mykey -storepass s3cr3t -keypass s3cr3t -keyalg RSA -keystore keystore.jks
 
         InputStream ins = Rsa.class.getResourceAsStream("/keystore.jks");
 
@@ -44,6 +48,14 @@ public class Rsa implements Algorithm {
         return new KeyPair(publicKey, privateKey);
     }
 
+    /**
+     *Encrypting
+     *
+     * @param plainText
+     * @param publicKey
+     * @return encrypted message
+     * @throws Exception
+     */
     public static String encrypt(String plainText, PublicKey publicKey) throws Exception {
         Cipher encryptCipher = Cipher.getInstance("RSA");
         encryptCipher.init(Cipher.ENCRYPT_MODE, publicKey);
@@ -53,6 +65,13 @@ public class Rsa implements Algorithm {
         return Base64.getEncoder().encodeToString(cipherText);
     }
 
+    /**
+     *decrypting
+     * @param cipherText
+     * @param privateKey
+     * @return decrypted message
+     * @throws Exception
+     */
     public static String decrypt(String cipherText, PrivateKey privateKey) throws Exception {
         byte[] bytes = Base64.getDecoder().decode(cipherText);
 
@@ -62,6 +81,14 @@ public class Rsa implements Algorithm {
         return new String(decriptCipher.doFinal(bytes), UTF_8);
     }
 
+    /**
+     * Generate sign
+     *
+     * @param plainText
+     * @param privateKey
+     * @return
+     * @throws Exception
+     */
     public static String sign(String plainText, PrivateKey privateKey) throws Exception {
         Signature privateSignature = Signature.getInstance("SHA256withRSA");
         privateSignature.initSign(privateKey);
@@ -72,6 +99,15 @@ public class Rsa implements Algorithm {
         return Base64.getEncoder().encodeToString(signature);
     }
 
+    /**
+     *Veryfing transcryption
+     *
+     * @param plainText
+     * @param signature
+     * @param publicKey
+     * @return true/false
+     * @throws Exception
+     */
     public static boolean verify(String plainText, String signature, PublicKey publicKey) throws Exception {
         Signature publicSignature = Signature.getInstance("SHA256withRSA");
         publicSignature.initVerify(publicKey);
@@ -82,6 +118,10 @@ public class Rsa implements Algorithm {
         return publicSignature.verify(signatureBytes);
     }
 
+    /**
+     *
+     * @throws Exception
+     */
     public static void main () throws Exception {
         //First generate a public/private key pair
         KeyPair pair = generateKeyPair();
@@ -109,6 +149,9 @@ public class Rsa implements Algorithm {
         System.out.println("Signature correct: " + isCorrect);
     }
 
+    /**
+     *
+     */
     public void use(){
         try {
             main();
