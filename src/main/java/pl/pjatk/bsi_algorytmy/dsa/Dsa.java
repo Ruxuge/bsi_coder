@@ -14,7 +14,7 @@ import java.util.Base64;
 /**
  * Algorithm to secure date with DSA
  *
- * @author Filip Werra s19375
+ * @author Filip Magdziak s19616
  */
 
 public class Dsa implements Algorithm{

@@ -2,7 +2,11 @@ package pl.pjatk.bsi_algorytmy.rc5;
 
 
 import java.io.*;
-
+/**
+ * Class to implement decryption using RC5
+ *
+ * @author Filip Magdziak s19616
+ */
 public class RC5Dec {
     public void decrypt() throws Exception{
         KeyExp ke = new KeyExp();

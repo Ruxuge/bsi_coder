@@ -1,7 +1,11 @@
 package pl.pjatk.bsi_algorytmy.rc5;
 
 import java.io.*;
-
+/**
+ * Class to implement encryption using RC5
+ *
+ * @author Filip Magdziak s19616
+ */
 public class RC5Enc {
 
     public void encrypt() throws Exception{

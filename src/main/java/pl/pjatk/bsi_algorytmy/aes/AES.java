@@ -17,7 +17,11 @@ import java.util.Scanner;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
-
+/**
+ * App to encrypt and decrypt any String message using AES.
+ *
+ * @author Filip Magdziak s19616
+ */
 public class AES implements Algorithm{
     public static void main(String[] args)
     {

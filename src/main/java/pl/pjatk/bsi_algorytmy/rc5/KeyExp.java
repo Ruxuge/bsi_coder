@@ -2,7 +2,11 @@ package pl.pjatk.bsi_algorytmy.rc5;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
+/**
+ * Class to implement keys into the RC5
+ *
+ * @author Filip Magdziak s19616
+ */
 public class KeyExp {
     String s[] = new String[26];
     public static void main(String[] args) throws Exception{

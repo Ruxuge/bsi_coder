@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * source: https://gist.github.com/riversun
  *
- * @author Filip Werra
+ * @author Filip Magdziak s19616
  */
 public class TripleDes implements Algorithm{
 
