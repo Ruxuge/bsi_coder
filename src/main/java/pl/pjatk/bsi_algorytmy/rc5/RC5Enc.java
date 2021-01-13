@@ -7,7 +7,7 @@ import java.io.*;
  * @author Filip Magdziak s19616
  */
 public class RC5Enc {
-
+    //method doing calculations to do the RC5 encryption
     public void encrypt() throws Exception{
         KeyExp ke = new KeyExp();
         String s[] = ke.compute();
@@ -37,7 +37,7 @@ public class RC5Enc {
     public String fullfill0(String x) {
         return (get0(32-x.length())+ x);
     }
-
+    //method that does (exclusive or)
     public String xor(String x, String y) {
         String result = "";
         for (int i = 0; i < x.length(); i++) {
@@ -50,7 +50,7 @@ public class RC5Enc {
         }
         return result;
     }
-
+    //method that return array filled with ZEROs
     public String get0(int len) {
         String result = "";
         for (int i = 0; i < len; i++) {

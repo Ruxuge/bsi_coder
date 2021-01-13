@@ -7,6 +7,8 @@ import java.io.*;
  *
  * @author Filip Magdziak s19616
  */
+
+//method doing calculations to do the RC5 decryption
 public class RC5Dec {
     public void decrypt() throws Exception{
         KeyExp ke = new KeyExp();
@@ -41,7 +43,7 @@ public class RC5Dec {
     public String fullfill0(String x) {
         return (get0(32-x.length())+ x);
     }
-
+    //method that does (exclusive or)
     public String xor(String x, String y) {
         String result = "";
         for (int i = 0; i < x.length(); i++) {
@@ -54,7 +56,7 @@ public class RC5Dec {
         }
         return result;
     }
-
+    //method that return array filled with ZEROS
     public String get0(int len) {
         String result = "";
         for (int i = 0; i < len; i++) {
